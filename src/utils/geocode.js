@@ -13,7 +13,8 @@ const geo = (address, callback) => {
     else{
     const latitude = response.body.features[0]["center"][0]
     const longitude = response.body.features[0]["center"][1]
-    callback(longitude,latitude)
+    const district = response.body.features[0]["context"][0]["text"]
+    callback(longitude,latitude,district)
     }
     })
     }
