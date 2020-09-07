@@ -46,7 +46,7 @@ app.get('/weather', (req,res) => {
             error:"Kindly provide proper address"
         })
     }
-    geocode(req.query.address,(latitude,longitude,district) => {
+    geocode(req.query.address,(latitude,longitude,placename) => {
         // if (error) {
         //     console.log(req.query.address)
         //     return res.send({error})
@@ -58,7 +58,7 @@ app.get('/weather', (req,res) => {
             res.send({
                 forecast:forecastData,
                 address:"Address is "+req.query.address,
-                District:"The current location belongs to "+district+" Distrcit"
+                // PlaceName:"Place name is "+placename
             })
         })
     })

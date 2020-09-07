@@ -24,7 +24,7 @@ weatherForm.addEventListener("submit", (e) =>{
         else {
             messageOne.textContent = data.forecast
             messageTwo.textContent = data.address
-            messageThree.textContent = data.District
+            messageThree.textContent = data.placename
         }
     })
 })
